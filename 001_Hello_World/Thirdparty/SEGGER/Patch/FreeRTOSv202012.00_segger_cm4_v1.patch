@@ -378,18 +378,3 @@
                  vListInsert( pxDelayedTaskList, &( pxCurrentTCB->xStateListItem ) );
  
                  /* If the task entering the blocked state was placed at the head of the
---- SEGGER_SYSVIEW_Conf_org.h	2020-10-20 22:01:59.991870400 +0530
-+++ SEGGER_SYSVIEW_Conf.h	2021-03-14 10:50:29.522116000 +0530
-@@ -78,6 +78,12 @@
- * TODO: Add your defines here.                                       *
- **********************************************************************
- */
-+#define SEGGER_UART_REC 0
-+
-+#if (SEGGER_UART_REC == 1)
-+	extern void HIF_UART_EnableTXEInterrupt  (void);
-+	#define SEGGER_SYSVIEW_ON_EVENT_RECORDED(x)  HIF_UART_EnableTXEInterrupt()
-+#endif
- 
- 
- #endif  // SEGGER_SYSVIEW_CONF_H
