@@ -124,8 +124,6 @@ int main(void)
 
   configASSERT(status == pdPASS);
 
-  next_task_handle = ledg_task_handle;
-
   status = xTaskCreate(led_red_handler, "LED_red_task", 200,NULL, 2, &ledr_task_handle);
 
   configASSERT(status == pdPASS);
@@ -347,7 +345,7 @@ static void led_green_handler(void* parameters)
 	{
 		SEGGER_SYSVIEW_PrintfTarget("Toggling green LED");
 		HAL_GPIO_TogglePin(GPIOD, LED_GREEN_PIN);
-		status = xTaskNotifyWait(0, 0, NULL, pdMS_TO_TICKS(1000));
+		status = vTaskNotifyWait(0, 0, NULL, pdMS_TO_TICKS(1000));
 		if(status == pdTRUE){
 
 			/* Suspend the Scheduler */
@@ -357,7 +355,6 @@ static void led_green_handler(void* parameters)
 			/* Resume Scheduler */
 			xTaskResumeAll();
 
-			/* Open */
 			HAL_GPIO_WritePin(GPIOD, LED_GREEN_PIN, GPIO_PIN_SET);
 
 			/* Delete Task */
@@ -376,12 +373,11 @@ static void led_orange_handler(void* parameters)
 	{
 		SEGGER_SYSVIEW_PrintfTarget("Toggling orange LED");
 		HAL_GPIO_TogglePin(GPIOD, LED_ORANGE_PIN);
-		status = xTaskNotifyWait(0, 0, NULL, pdMS_TO_TICKS(800));
+		status = vTaskNotifyWait(0, 0, NULL, pdMS_TO_TICKS(800));
 		if(status == pdTRUE){
 			vTaskSuspendAll();
 			next_task_handle = ledr_task_handle;
 			xTaskResumeAll();
-
 			HAL_GPIO_WritePin(GPIOD, LED_ORANGE_PIN, GPIO_PIN_SET);
 
 			/* Delete Task*/
@@ -401,7 +397,7 @@ static void led_red_handler(void* parameters)
 	{
 		SEGGER_SYSVIEW_PrintfTarget("Toggling red LED");
 		HAL_GPIO_TogglePin(GPIOD, LED_RED_PIN);
-		status = xTaskNotifyWait(0, 0, NULL, pdMS_TO_TICKS(400));
+		status = vTaskNotifyWait(0, 0, NULL, pdMS_TO_TICKS(400));
 		if(status == pdTRUE){
 			vTaskSuspendAll();
 			next_task_handle = NULL;
@@ -435,14 +431,11 @@ static void button_handler(void* parameters){
 	}
 
 }
-#if configUSE_IDLE_HOOK
 void vApplicationIdleHook( void ){
 	/* Sleep Mode by using IRQ Interrupt */
-//	HAL_PWR_EnterSLEEPMode(PWR_MAINREGULATOR_ON, PWR_SLEEPENTRY_WFI);
-	return;
+	HAL_PWR_EnterSLEEPMode(PWR_MAINREGULATOR_ON, PWR_SLEEPENTRY_WFI);
 
 }
-#endif
 
 /* USER CODE END 4 */
 

@@ -124,8 +124,6 @@ int main(void)
 
   configASSERT(status == pdPASS);
 
-  next_task_handle = ledg_task_handle;
-
   status = xTaskCreate(led_red_handler, "LED_red_task", 200,NULL, 2, &ledr_task_handle);
 
   configASSERT(status == pdPASS);

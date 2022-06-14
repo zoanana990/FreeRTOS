@@ -124,8 +124,6 @@ int main(void)
 
   configASSERT(status == pdPASS);
 
-  next_task_handle = ledg_task_handle;
-
   status = xTaskCreate(led_red_handler, "LED_red_task", 200,NULL, 2, &ledr_task_handle);
 
   configASSERT(status == pdPASS);
@@ -435,14 +433,12 @@ static void button_handler(void* parameters){
 	}
 
 }
-#if configUSE_IDLE_HOOK
 void vApplicationIdleHook( void ){
 	/* Sleep Mode by using IRQ Interrupt */
 //	HAL_PWR_EnterSLEEPMode(PWR_MAINREGULATOR_ON, PWR_SLEEPENTRY_WFI);
 	return;
 
 }
-#endif
 
 /* USER CODE END 4 */
 

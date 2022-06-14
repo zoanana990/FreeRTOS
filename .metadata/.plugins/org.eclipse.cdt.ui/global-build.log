@@ -1,4 +1,4 @@
-09:18:49 **** Incremental Build of configuration Debug for project 002_TOGGLE_LED ****
+10:38:18 **** Incremental Build of configuration Debug for project 002_TOGGLE_LED ****
 make -j8 all 
 arm-none-eabi-gcc "D:/RTOS/RTOS_Wrokspace/common/ThirdParty/SEGGER/OS/SEGGER_SYSVIEW_FreeRTOS.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"D:/RTOS/RTOS_Wrokspace/common/ThirdParty/FreeRTOS/include" -I"D:/RTOS/RTOS_Wrokspace/common/ThirdParty/FreeRTOS/portable/GCC/ARM_CM4F" -I"D:/RTOS/RTOS_Wrokspace/common/ThirdParty/SEGGER/Config" -I"D:/RTOS/RTOS_Wrokspace/common/ThirdParty/SEGGER/OS" -I"D:/RTOS/RTOS_Wrokspace/common/ThirdParty/SEGGER/SEGGER" -I"D:/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/Config" -I"D:/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/portable/GCC/ARM_CM4F" -I"D:/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/include" -I"D:/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/OS" -I"D:/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/SEGGER" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"common/ThirdParty/SEGGER/OS/SEGGER_SYSVIEW_FreeRTOS.d" -MT"common/ThirdParty/SEGGER/OS/SEGGER_SYSVIEW_FreeRTOS.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "common/ThirdParty/SEGGER/OS/SEGGER_SYSVIEW_FreeRTOS.o"
 arm-none-eabi-gcc "D:/RTOS/RTOS_Wrokspace/common/ThirdParty/SEGGER/Config/SEGGER_SYSVIEW_Config_FreeRTOS.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"D:/RTOS/RTOS_Wrokspace/common/ThirdParty/FreeRTOS/include" -I"D:/RTOS/RTOS_Wrokspace/common/ThirdParty/FreeRTOS/portable/GCC/ARM_CM4F" -I"D:/RTOS/RTOS_Wrokspace/common/ThirdParty/SEGGER/Config" -I"D:/RTOS/RTOS_Wrokspace/common/ThirdParty/SEGGER/OS" -I"D:/RTOS/RTOS_Wrokspace/common/ThirdParty/SEGGER/SEGGER" -I"D:/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/Config" -I"D:/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/portable/GCC/ARM_CM4F" -I"D:/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/include" -I"D:/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/OS" -I"D:/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/SEGGER" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"common/ThirdParty/SEGGER/Config/SEGGER_SYSVIEW_Config_FreeRTOS.d" -MT"common/ThirdParty/SEGGER/Config/SEGGER_SYSVIEW_Config_FreeRTOS.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "common/ThirdParty/SEGGER/Config/SEGGER_SYSVIEW_Config_FreeRTOS.o"
@@ -20,7 +20,38 @@ arm-none-eabi-size   002_TOGGLE_LED.elf
 arm-none-eabi-objdump -h -S  002_TOGGLE_LED.elf  > "002_TOGGLE_LED.list"
 arm-none-eabi-objcopy  -O binary  002_TOGGLE_LED.elf  "002_TOGGLE_LED.bin"
    text	   data	    bss	    dec	    hex	filename
-  23988	     36	 110092	 134116	  20be4	002_TOGGLE_LED.elf
+  26200	     36	 110116	 136352	  214a0	002_TOGGLE_LED.elf
+Finished building: default.size.stdout
+ 
+Finished building: 002_TOGGLE_LED.bin
+ 
+Finished building: 002_TOGGLE_LED.list
+ 
+10:38:25 **** Incremental Build of configuration Debug for project 002_TOGGLE_LED ****
+make -j8 all 
+arm-none-eabi-size   002_TOGGLE_LED.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26200	     36	 110116	 136352	  214a0	002_TOGGLE_LED.elf
+Finished building: default.size.stdout
+ 
+10:38:29 **** Incremental Build of configuration Debug for project 002_TOGGLE_LED ****
+make -j8 all 
+arm-none-eabi-size   002_TOGGLE_LED.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26200	     36	 110116	 136352	  214a0	002_TOGGLE_LED.elf
+Finished building: default.size.stdout
+ 
+11:16:01 **** Incremental Build of configuration Debug for project 002_TOGGLE_LED ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"D:/RTOS/RTOS_Wrokspace/common/ThirdParty/FreeRTOS/include" -I"D:/RTOS/RTOS_Wrokspace/common/ThirdParty/FreeRTOS/portable/GCC/ARM_CM4F" -I"D:/RTOS/RTOS_Wrokspace/common/ThirdParty/SEGGER/Config" -I"D:/RTOS/RTOS_Wrokspace/common/ThirdParty/SEGGER/OS" -I"D:/RTOS/RTOS_Wrokspace/common/ThirdParty/SEGGER/SEGGER" -I"D:/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/Config" -I"D:/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/portable/GCC/ARM_CM4F" -I"D:/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/include" -I"D:/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/OS" -I"D:/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/SEGGER" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "002_TOGGLE_LED.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\RTOS\RTOS_Wrokspace\002_TOGGLE_LED\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="002_TOGGLE_LED.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 002_TOGGLE_LED.elf
+ 
+arm-none-eabi-size   002_TOGGLE_LED.elf 
+arm-none-eabi-objdump -h -S  002_TOGGLE_LED.elf  > "002_TOGGLE_LED.list"
+arm-none-eabi-objcopy  -O binary  002_TOGGLE_LED.elf  "002_TOGGLE_LED.bin"
+   text	   data	    bss	    dec	    hex	filename
+  26216	     36	 110116	 136368	  214b0	002_TOGGLE_LED.elf
 Finished building: default.size.stdout
  
 Finished building: 002_TOGGLE_LED.bin

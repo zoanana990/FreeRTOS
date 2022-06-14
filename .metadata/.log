@@ -2772,3 +2772,13 @@ java.lang.Exception: File not found: D:\RTOS\RTOS_Wrokspace\RRR\.project.
 
 !ENTRY org.eclipse.debug.core 4 5012 2022-06-14 08:52:55.558
 !MESSAGE Launch configuration 002_TOGGLE_LED does not exist
+
+!ENTRY com.st.stm32cube.ide.mcu.stackanalyzer 4 0 2022-06-14 10:29:03.259
+!MESSAGE Stackanalyzer failed to analyze input
+!STACK 0
+java.lang.Exception: File: D:\RTOS\RTOS_Wrokspace\002_TOGGLE_LED\Debug\002_TOGGLE_LED.elfdo not exists
+	at com.st.stm32cube.ide.mcu.utils.assembly.Disassembler.<init>(Disassembler.java:56)
+	at com.st.stm32cube.ide.mcu.utils.assembly.Disassembler.<init>(Disassembler.java:84)
+	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.inputChanged(StackAnalyzerView.java:914)
+	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$16(StackAnalyzerView.java:1276)
+	at java.base/java.lang.Thread.run(Thread.java:834)
