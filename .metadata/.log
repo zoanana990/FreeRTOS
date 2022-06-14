@@ -2769,3 +2769,6 @@ java.lang.Exception: File not found: D:\RTOS\RTOS_Wrokspace\RRR\.project.
 	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2317)
 	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:89)
 	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+
+!ENTRY org.eclipse.debug.core 4 5012 2022-06-14 08:52:55.558
+!MESSAGE Launch configuration 002_TOGGLE_LED does not exist
